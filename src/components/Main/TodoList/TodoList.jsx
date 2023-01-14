@@ -2,6 +2,8 @@ import { useTodoListContext } from '../../../contexts/TodoListContext';
 import { TodoTask } from '../TodoTask/TodoTask';
 
 export function TodoList() {
+  console.log('Render TodoList');
+
   const tasks = useTodoListContext();
 
   if (!tasks.length) {

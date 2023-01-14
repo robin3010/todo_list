@@ -4,6 +4,8 @@ import { Main } from './components/Main/Main';
 import { Footer } from './components/Footer/Footer';
 
 function App() {
+  console.log('Render App');
+
   return (
     <div className="container d-flex flex-column vh-100">
       <Header />

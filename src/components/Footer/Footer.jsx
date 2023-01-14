@@ -3,6 +3,8 @@ import { useTodoListMethodsContext } from '../../contexts/TodoListContext';
 import './Footer.module.css';
 
 export const Footer = memo(() => {
+  console.log('Render Footer');
+
   const { clearTodoList } = useTodoListMethodsContext();
 
   const clearTodoListHandler = () => {

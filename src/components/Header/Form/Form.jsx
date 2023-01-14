@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useTodoListMethodsContext } from '../../../contexts/TodoListContext';
 
 export function Form() {
+  console.log('Render Form');
+
   const { addNewTask } = useTodoListMethodsContext();
 
   const [title, setTitle] = useState('');
@@ -14,7 +16,6 @@ export function Form() {
     e.preventDefault();
 
     if (title.length) {
-      console.log({ title });
       addNewTask(title);
       setTitle('');
     }
