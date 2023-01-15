@@ -9,6 +9,7 @@ import { ErrorPage } from './components/Pages/Error/Error';
 import { Main } from './components/Main/Main';
 import { Tasks } from './components/Pages/Tasks/Tasks';
 import { TodoTaskDetail } from './components/Pages/TodoTaskDetail/TodoTaskDetail';
+import { NewTaskForm } from './components/Pages/NewTaskForm/NewTaskForm';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: 'tasks/:taskId',
         element: <TodoTaskDetail />,
+      },
+      {
+        path: 'tasks/new',
+        element: <NewTaskForm />,
       },
     ],
   },

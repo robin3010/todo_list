@@ -1,11 +1,14 @@
-import { Outlet } from 'react-router-dom';
-import { Form } from '../../Form/Form';
+import { Link, Outlet } from 'react-router-dom';
 import { TodoList } from '../../TodoList/TodoList';
 
 export function Tasks() {
   return (
     <>
-      <Form />
+      <Link to="./new" className="text-center my-3">
+        <button type="submit" className="btn btn-secondary">
+          <i className="fa-solid fa-plus" />
+        </button>
+      </Link>
       <TodoList />
       <Outlet />
     </>
