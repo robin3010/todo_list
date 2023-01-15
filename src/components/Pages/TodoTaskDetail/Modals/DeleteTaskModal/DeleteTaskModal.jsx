@@ -1,10 +1,13 @@
-import { useTodoListMethodsContext } from '../../../../contexts/TodoListContext';
-import { ModalContainer } from '../../../ModalContainer/ModalContainer';
+import { useNavigate } from 'react-router-dom';
+import { useTodoListMethodsContext } from '../../../../../contexts/TodoListContext';
+import { ModalContainer } from '../../../../ModalContainer/ModalContainer';
 
 export function DeleteTaskModal({
   isOpen, setIsOpen, title, id,
 }) {
   const { deleteTask } = useTodoListMethodsContext();
+
+  const navigate = useNavigate();
 
   const closeDeleteModal = () => {
     setIsOpen(false);
@@ -13,6 +16,9 @@ export function DeleteTaskModal({
   const deleteHandler = () => {
     deleteTask(id);
     closeDeleteModal();
+    navigate('..', {
+      relative: 'path',
+    });
   };
 
   return (

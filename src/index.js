@@ -8,6 +8,7 @@ import { Contacts } from './components/Pages/Contacts/Contacts';
 import { ErrorPage } from './components/Pages/Error/Error';
 import { Main } from './components/Main/Main';
 import { Tasks } from './components/Pages/Tasks/Tasks';
+import { TodoTaskDetail } from './components/Pages/TodoTaskDetail/TodoTaskDetail';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'tasks',
         element: <Tasks />,
+      },
+      {
+        path: 'tasks/:taskId',
+        element: <TodoTaskDetail />,
       },
     ],
   },

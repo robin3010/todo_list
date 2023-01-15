@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useTodoListMethodsContext } from '../../../../contexts/TodoListContext';
-import { ModalContainer } from '../../../ModalContainer/ModalContainer';
+import { useTodoListMethodsContext } from '../../../../../contexts/TodoListContext';
+import { ModalContainer } from '../../../../ModalContainer/ModalContainer';
 
 export function EditTaskModal({
   isOpen, setIsOpen, title, id,

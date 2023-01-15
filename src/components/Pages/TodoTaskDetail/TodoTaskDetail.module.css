@@ -1,0 +1,7 @@
+.task__buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  min-width: 60vw;
+  max-width: 95vw;
+}

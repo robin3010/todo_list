@@ -1,10 +1,14 @@
+a {
+  text-decoration: none;
+}
+
 .todoList button {
   width: 42px;
   height: 42px;
   opacity: .9;
 }
 
-button:hover {
+.todoList button:hover {
   opacity: 1;
 }
 

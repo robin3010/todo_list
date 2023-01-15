@@ -56,6 +56,8 @@ export const useTasks = () => {
     setTasks([]);
   }, []);
 
+  const getTaskById = (id) => tasks.find((task) => task.id === id);
+
   return {
     tasks,
     addNewTask,
@@ -63,5 +65,6 @@ export const useTasks = () => {
     changeTaskStatus,
     editTask,
     clearTodoList,
+    getTaskById,
   };
 };

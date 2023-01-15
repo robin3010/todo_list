@@ -7,7 +7,7 @@ export const todoListMethodsContext = createContext();
 export function TodoListContextWr({ children }) {
   const { tasks, ...methods } = useTasks();
 
-  const methodsContext = useMemo(() => methods, []);
+  const methodsContext = useMemo(() => methods, [tasks]);
 
   return (
     <todoListContext.Provider value={tasks}>
