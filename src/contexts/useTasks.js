@@ -24,11 +24,11 @@ export const useTasks = () => {
     setTasks((prev) => [newTask, ...prev]);
   }, []);
 
-  const deleteTask = (id) => {
+  const deleteTask = useCallback((id) => {
     setTasks((prev) => prev.filter((task) => task.id !== id));
-  };
+  }, []);
 
-  const changeTaskStatus = (id) => {
+  const changeTaskStatus = useCallback((id) => {
     setTasks((prev) => prev.map((task) => {
       if (task.id === id) {
         return {
@@ -38,8 +38,19 @@ export const useTasks = () => {
       }
       return task;
     }));
-    console.log();
-  };
+  }, []);
+
+  const editTask = useCallback((id, editedTask) => {
+    setTasks((prev) => prev.map((task) => {
+      if (task.id === id) {
+        return {
+          ...task,
+          ...editedTask,
+        };
+      }
+      return task;
+    }));
+  }, []);
 
   const clearTodoList = useCallback(() => {
     setTasks([]);
@@ -50,6 +61,7 @@ export const useTasks = () => {
     addNewTask,
     deleteTask,
     changeTaskStatus,
+    editTask,
     clearTodoList,
   };
 };

@@ -16,7 +16,8 @@ export const Footer = memo(() => {
       <button
         onClick={clearTodoListHandler}
         type="button"
-        className="btn btn-outline-danger w-50 bg-opacity-75"
+        className="btn btn-outline-danger border border-2 border-danger border-opacity-75"
+        style={{ fontWeight: 500 }}
       >
         <span>clear Todo List </span>
         <i className="fa-solid fa-trash" />
