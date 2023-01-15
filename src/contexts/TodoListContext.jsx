@@ -5,13 +5,9 @@ export const todoListContext = createContext();
 export const todoListMethodsContext = createContext();
 
 export function TodoListContextWr({ children }) {
-  const {
-    tasks, addNewTask, deleteTask, changeTaskStatus, clearTodoList,
-  } = useTasks();
+  const { tasks, ...methods } = useTasks();
 
-  const methodsContext = useMemo(() => ({
-    addNewTask, deleteTask, changeTaskStatus, clearTodoList,
-  }), []);
+  const methodsContext = useMemo(() => methods, []);
 
   return (
     <todoListContext.Provider value={tasks}>
