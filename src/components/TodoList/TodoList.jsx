@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useTodoListContext } from '../../../contexts/TodoListContext';
+import { useTodoListContext } from '../../contexts/TodoListContext';
 import { TodoTask } from '../TodoTask/TodoTask';
 
 export function TodoList() {

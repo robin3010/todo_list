@@ -1,5 +1,5 @@
-import { useTodoListMethodsContext } from '../../../../../contexts/TodoListContext';
-import { ModalContainer } from '../../../../ModalContainer/ModalContainer';
+import { useTodoListMethodsContext } from '../../../../contexts/TodoListContext';
+import { ModalContainer } from '../../../ModalContainer/ModalContainer';
 
 export function DeleteTaskModal({
   isOpen, setIsOpen, title, id,

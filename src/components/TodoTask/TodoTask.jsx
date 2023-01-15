@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { useState } from 'react';
-import { useTodoListMethodsContext } from '../../../contexts/TodoListContext';
+import { useTodoListMethodsContext } from '../../contexts/TodoListContext';
 import { DeleteTaskModal } from './Modals/DeleteTaskModal/DeleteTaskModal';
 import { EditTaskModal } from './Modals/EditTaskModal/EditTaskModal';
 import styles from './TodoTask.module.css';

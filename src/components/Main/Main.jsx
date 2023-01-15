@@ -1,9 +1,7 @@
-import { TodoList } from './TodoList/TodoList';
-
 export function Main() {
   console.log('Render Main');
 
   return (
-    <TodoList />
+    <h1 className="m-0 vh-100 text-center">MAIN</h1>
   );
 }

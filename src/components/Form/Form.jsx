@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTodoListMethodsContext } from '../../../contexts/TodoListContext';
+import { useTodoListMethodsContext } from '../../contexts/TodoListContext';
 
 export function Form() {
   console.log('Render Form');
@@ -22,8 +22,12 @@ export function Form() {
   };
 
   return (
-    <form onSubmit={submitHandler} style={{ minWidth: '40vw', maxWidth: '95vw' }}>
-      <div className="d-flex my-3 mx-auto gap-2">
+    <form
+      onSubmit={submitHandler}
+      className="mx-auto"
+      style={{ minWidth: '40vw', maxWidth: '95vw' }}
+    >
+      <div className="d-flex my-3 gap-2">
         <input
           type="text"
           className="form-control"
