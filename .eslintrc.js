@@ -17,6 +17,14 @@ module.exports = {
   plugins: [
     'react',
   ],
+  settings: {
+    'import/extensions': [
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
+    ],
+  },
   rules: {
     // semi: ['error', 'never'],
     'no-console': 0,
