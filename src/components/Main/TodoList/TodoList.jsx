@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { useTodoListContext } from '../../../contexts/TodoListContext';
 import { TodoTask } from '../TodoTask/TodoTask';
 
@@ -7,11 +8,22 @@ export function TodoList() {
   const tasks = useTodoListContext();
 
   if (!tasks.length) {
-    return <p className="py-3 text-center m-0 flex-grow-1">No tasks here...</p>;
+    return <p className="py-3 text-center m-0">No tasks here...:(</p>;
   }
 
   return (
-    <ol className="list-group list-group-numbered list-group-flush flex-grow-1 .bg-body-tertiary">
+    <ol
+      className={clsx(
+        'list-group',
+        'list-group-numbered',
+        'list-group-flush',
+        'flex-grow-1',
+        '.bg-body-tertiary',
+        'mx-auto',
+        'py-3',
+      )}
+      style={{ minWidth: '60vw', maxWidth: '95vw' }}
+    >
       {tasks.map((task) => (
         <TodoTask
           key={task.id}

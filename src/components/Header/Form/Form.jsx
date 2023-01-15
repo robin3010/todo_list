@@ -22,14 +22,14 @@ export function Form() {
   };
 
   return (
-    <form onSubmit={submitHandler} className="w-100">
-      <div className="d-flex my-3 mx-auto gap-2 w-75">
+    <form onSubmit={submitHandler} style={{ minWidth: '40vw', maxWidth: '95vw' }}>
+      <div className="d-flex my-3 mx-auto gap-2">
         <input
           type="text"
           className="form-control"
           value={title}
           onChange={inputHandler}
-          placeholder="type something you need to do..."
+          placeholder="new task"
         />
         <button type="submit" className="btn btn-secondary">
           <i className="fa-solid fa-plus" />
